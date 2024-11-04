@@ -15,13 +15,13 @@ header {
     padding: 15px;
     text-align: center;
     color: white;
-    position: fixed; /* Fixe le header en haut */
-    top: 0; /* Aligne le header en haut de la page */
-    left: 0; /* Aligne le header à gauche */
-    width: 100%; /* Prend toute la largeur de la page */
-    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
-    padding: 10px 20px; /* Espacement interne pour le contenu */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel : ombre pour un effet d'élévation */
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
