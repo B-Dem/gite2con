@@ -6,10 +6,81 @@
     <title>Relais San Petru Di Verde - Accueil</title>
     <link rel="icon" href="img/favicon.jpg" type="image/jpg">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles généraux */
+        a {
+            color: black; /* Couleur des liens en noir */
+            text-decoration: none; /* Enlève le soulignement */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff; /* Couleur de fond des boutons */
+            color: black; /* Couleur du texte des boutons */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Couleur de fond au survol */
+        }
+
+        /* Styles pour le header */
+        header {
+            position: fixed; /* Fixe le header en haut */
+            top: 0; /* Aligne le header en haut de la page */
+            left: 0; /* Aligne le header à gauche */
+            width: 100%; /* Prend toute la largeur de la page */
+            background-color: white; /* Couleur de fond blanche pour le header */
+            z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+            padding: 10px 20px; /* Espacement interne pour le contenu */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel : ombre pour un effet d'élévation */
+        }
+
+        /* Styles pour le footer */
+        footer {
+            background-color: white; /* Couleur de fond blanche pour le footer */
+            padding: 20px; /* Optionnel : ajoute un espacement autour du contenu */
+        }
+
+        footer p {
+            color: black; /* Couleur du texte en noir pour les paragraphes */
+        }
+        
+        /* Ajout de marges pour le contenu principal */
+        main {
+            margin-top: 80px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
+        }
+
+        /* Styles pour le fil d'Ariane */
+        .breadcrumb {
+            background-color: #f9f9f9; /* Couleur de fond */
+            padding: 10px; /* Espacement interne */
+            margin: 10px 0; /* Marges en haut et en bas */
+            font-size: 14px; /* Taille de police */
+        }
+
+        .breadcrumb a {
+            color: #007bff; /* Couleur des liens */
+            text-decoration: none; /* Pas de soulignement */
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline; /* Soulignement au survol */
+        }
+
+        .breadcrumb span {
+            color: black; /* Couleur du texte actuel */
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>Relais San Petru Di Verde - Col de Verde</h1>
+        <img src="img/gr20.png" alt="Logo du Relais" style="width: 100px; height: auto; float: left; margin-right: 10px;">
+        <h1 style="display: inline;">Relais San Petru Di Verde - Col de Verde</h1>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="localisation.html">Localisation</a>
@@ -18,16 +89,23 @@
     </header>
 
     <main>
+        <nav class="breadcrumb">
+            <a href="index.html">Accueil</a> &gt; 
+            <a href="localisation.html">Localisation</a> &gt; 
+            <span>Page actuelle</span>
+        </nav>
+
         <section class="description">
             <h2>Bienvenue sur le site du Relais San Petru Di Verde !</h2>
+            <p>‎ </p>
             <p>Situé à proximité du Col de Verde sur le GR20, notre gîte vous accueille pour une expérience unique en pleine nature.</p>
-            <p>Le relais San Petru Di Verde vous acceuillera dans un cadre naturel et sauvage. Dans une forêt centenaire de pins Laricios, d'hêtres et de sapins.</p>
+            <p>Le relais San Petru Di Verde vous accueillera dans un cadre naturel et sauvage. Dans une forêt centenaire de pins Laricios, d'hêtres et de sapins.</p>
             <img src="img/mondial-relay.jpg" alt="Photo du gîte d'altitude" style="width: 40%; height: auto;">
         </section>
     </main>
 
     <footer>
-        <p>Contact : contact@boccadiverdi.com | Téléphone : 04 95 24 46 82 | Téléphone : 06 74 90 68 62</p>
-    </footer>
+        <p>Contact : <a href="mailto:contact@boccadiverdi.com" class="button">contact@boccadiverdi.com</a> | Téléphone : <a href="tel:+33495244682" class="button">04 95 24 46 82</a> | Téléphone :  <a href="tel:+33674906862" class="button">06 74 90 68 62</a></p>
+    </footer>    
 </body>
 </html>
