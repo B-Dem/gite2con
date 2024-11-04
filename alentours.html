@@ -18,6 +18,10 @@
         </nav>
     </header>
 
+    <div class="progress-container">
+        <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+    </div>
+    
     <main>
         <section class="curiosites">
             <h2>Les alentours :</h2>
@@ -37,5 +41,21 @@
     <footer>
         <p>Contact : <a href="mailto:contact@boccadiverdi.com" class="button">contact@boccadiverdi.com</a> | Téléphone : <a href="tel:+33495244682" class="button">04 95 24 46 82</a> | Téléphone :  <a href="tel:+33674906862" class="button">06 74 90 68 62</a></p>
     </footer>
+
+    <script>
+        let progressBar = document.getElementById("progress-bar");
+        let width = 0;
+
+        function updateProgress() {
+            if (width >= 100) {
+                clearInterval(interval);
+            } else {
+                width++;
+                progressBar.style.width = width + '%'; 
+            }
+        }
+
+        let interval = setInterval(updateProgress, 100);
+    </script>
 </body>
 </html>

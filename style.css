@@ -97,3 +97,20 @@ footer p{
 main {
     padding-bottom: 60px; /* Ajustez en fonction de la hauteur de votre footer */
 }
+
+.progress-container {
+    width: 100%; /* Largeur de la barre de progression */
+    background-color: #e0e0e0; /* Couleur de fond de la barre */
+    border-radius: 5px; /* Coins arrondis */
+    overflow: hidden; /* Masque les débordements */
+    position: fixed; /* Fixe la barre en haut de la page */
+    top: 70px; /* Positionne la barre sous le header (ajustez selon la hauteur de votre header) */
+    z-index: 999; /* Assure que la barre reste au-dessus des autres éléments */
+}
+
+.progress-bar {
+    height: 20px; /* Hauteur de la barre de progression */
+    background-color: #4caf50; /* Couleur de la barre de progression */
+    transition: width 0.1s; /* Animation pour la largeur */
+}
+
