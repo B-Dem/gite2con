@@ -7,7 +7,7 @@
     <link rel="icon" href="img/favicon.jpg" type="image/jpg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-accueil">
     <header>
         <img src="img/gr20.png" alt="Logo du Relais" style="width: 100px; height: auto; float: left; margin-right: 0px;">
         <h1>Relais San Petru Di Verde - Col de Verde</h1>
@@ -26,15 +26,22 @@
         <section class="curiosites">
             <h2>Les alentours :</h2>
             <p>Découvrez les merveilles naturelles et culturelles autour du gîte : montagnes, forêts, et villages pittoresques.</p>
-            <p>‎</p>
-            <h2>Les Bergeries des Pozzi :</h2>
-            <img src="img/Bergerie.jpg" alt="Les Bergeries des Pozzi" style="width: 40%; height: auto;">
-            <p>‎</p>
-            <h2>Le sapin géant :</h2>
-            <img src="img/sapin.jpg" alt="Le sapin géant" style="width: 40%; height: auto;">
-            <p>‎</p>
-            <h2>Le village de Palneca :</h2>
-            <img src="img/palneca.jpg" alt="Le village de Palneca" style="width: 40%; height: auto;">
+            
+            <div class="image-row">
+                <div class="image-column">
+                    <h2>Les Bergeries des Pozzi :</h2>
+                    <img src="img/Bergerie.jpg" alt="Les Bergeries des Pozzi">
+                </div>
+                <div class="image-column">
+                    <h2>Le sapin géant :</h2>
+                    <img src="img/sapin.jpg" alt="Le sapin géant">
+                </div>
+            </div>
+            
+            <div class="image-center">
+                <h2>Le village de Palneca :</h2>
+                <img src="img/palneca.jpg" alt="Le village de Palneca">
+            </div>
         </section>
     </main>
 
@@ -43,18 +50,15 @@
     </footer>
 
     <script>
-    let progressBar = document.getElementById("progress-bar");
+        let progressBar = document.getElementById("progress-bar");
 
-    window.addEventListener("scroll", function() {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-
-        // Calculer le pourcentage de défilement
-        const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-        progressBar.style.width = scrollPercent + "%";
-    });
+        window.addEventListener("scroll", function() {
+            const scrollTop = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+            progressBar.style.width = scrollPercent + "%";
+        });
     </script>
-
 </body>
 </html>
