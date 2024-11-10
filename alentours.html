@@ -43,19 +43,18 @@
     </footer>
 
     <script>
-        let progressBar = document.getElementById("progress-bar");
-        let width = 0;
+    let progressBar = document.getElementById("progress-bar");
 
-        function updateProgress() {
-            if (width >= 100) {
-                clearInterval(interval);
-            } else {
-                width++;
-                progressBar.style.width = width + '%'; 
-            }
-        }
+    window.addEventListener("scroll", function() {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
 
-        let interval = setInterval(updateProgress, 100);
+        // Calculer le pourcentage de défilement
+        const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+        progressBar.style.width = scrollPercent + "%";
+    });
     </script>
+
 </body>
 </html>
