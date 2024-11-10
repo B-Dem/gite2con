@@ -1,4 +1,3 @@
-/* Styles généraux */
 * {
     margin: 0;
     padding: 0;
@@ -67,6 +66,20 @@ p {
     font-family: 'lien';
 }
 
+p1 {
+    color:#ffffff
+}
+
+a {
+    color:#ffffff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
 footer {
     background-color: #03614e;
     color: white;
@@ -77,50 +90,26 @@ footer {
     width: 100%;
 }
 
-main {
-    padding-bottom: 60px;
+footer p{
+    color:#ffffff
 }
 
-/* Barre de progression */
+main {
+    padding-bottom: 60px; /* Ajustez en fonction de la hauteur de votre footer */
+}
+
 .progress-container {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    position: fixed;
-    top: 70px;
-    z-index: 999;
+    width: 100%; /* Largeur de la barre de progression */
+    background-color: #e0e0e0; /* Couleur de fond de la barre */
+    border-radius: 5px; /* Coins arrondis */
+    overflow: hidden; /* Masque les débordements */
+    position: fixed; /* Fixe la barre en haut de la page */
+    top: 70px; /* Positionne la barre sous le header (ajustez selon la hauteur de votre header) */
+    z-index: 999; /* Assure que la barre reste au-dessus des autres éléments */
 }
 
 .progress-bar {
-    height: 20px;
-    background-color: #4caf50;
-    transition: width 0.1s;
-}
-
-
-.page-accueil .curiosites {
-    text-align: center;
-}
-
-.page-accueil .image-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.page-accueil .image-column {
-    width: 48%;
-    text-align: center;
-}
-
-.page-accueil .image-center {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.page-accueil .image-row img, .page-accueil .image-center img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+    height: 20px; /* Hauteur de la barre de progression */
+    background-color: #4caf50; /* Couleur de la barre de progression */
+    transition: width 0.1s; /* Animation pour la largeur */
 }
